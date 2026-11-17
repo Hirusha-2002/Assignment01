@@ -1,56 +1,36 @@
-# Welcome to your Expo app 👋
+# CineTrack - Movie Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Name:** [Hirusha Attanayake]
+**Student ID:** [PE/2022/011]
 
-## Get started
+## App Purpose
+CineTrack is a mobile application that allows movie enthusiasts to browse a curated list of classic films, filter them by genre, and save their favorites for later viewing.
 
-1. Install dependencies
+## Screens
+1. **Home (Movies) Screen**: Displays a FlatList of movies. Includes a Modal to filter movies by genre.
+2. **Favorites Screen**: Shows only the movies the user has saved.
+3. **Details Screen**: A nested Stack screen showing the poster, rating, and description of the selected movie, with a button to toggle favorites.
 
-   ```bash
-   npm install
-   ```
+## Core Components Used
+- **FlatList**: Used in Home and Favorites to render lists.
+- **Pressable**: Used for movie cards and buttons.
+- **Image**: Used for movie posters.
+- **Modal**: Used for the genre filter.
+- **Context API**: Used for state management (favorites).
 
-2. Start the app
+## Expo Router Structure
+- `app/_layout.js`: Root layout containing AppProvider and AppState logic.
+- `app/(tabs)/_layout.js`: Bottom tabs setup.
+- `app/(tabs)/index.js`: Home screen.
+- `app/(tabs)/favorites.js`: Favorites screen.
+- `app/details/[id].js`: Nested stack screen for details.
 
-   ```bash
-   npx expo start
-   ```
+## Notifications & AppState Implementation
+Using `expo-notifications`, I request permissions on app launch. Using the `AppState` API in the root layout, the app listens for transitions from the background to the foreground. When the user returns to the app, an immediate local notification triggers saying "Welcome back to CineTrack!".
 
-In the output, you'll find options to open the app in a
+## Local Setup
+1. `npm install`
+2. `npx expo start`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Demo Video
+[Insert your Unlisted YouTube Link Here]
